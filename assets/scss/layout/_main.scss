@@ -1,0 +1,8 @@
+@use "../foundation/color" as c;
+@use "../foundation/bp" as bp;
+
+.l-main {
+    &--front {
+        padding: 100px 0 0;
+    }
+}

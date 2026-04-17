@@ -1,4 +1,9 @@
-    <?php wp_footer(); ?>
-    </body>
+<?php
+if (! defined('ABSPATH')) exit;
 
-    </html>
+?>
+</main>
+<?php wp_footer(); ?>
+</body>
+
+</html>

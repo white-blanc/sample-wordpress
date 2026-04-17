@@ -1,0 +1,37 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/bp" as bp;
+
+.c-link {
+    display: block;
+    width: fit-content;
+    color: c.$main;
+    position: relative;
+    padding: 10px 30px 10px 0;
+    border-bottom: 1px c.$main solid;
+    text-decoration: none;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 1em;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translate(50%, -50%);
+        background-color: c.$main;
+        mask-image: url("./../img/icon/icon-arrow.svg");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        transition: 0.3s;
+    }
+
+    @include bp.bp(tb) {
+        &:hover {
+            &::before {
+                transform: translate(100%, -50%);
+            }
+        }
+    }
+}

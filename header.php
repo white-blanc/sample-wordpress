@@ -1,3 +1,7 @@
+<?php
+if (! defined('ABSPATH')) exit;
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,3 +13,7 @@
 </head>
 
 <body>
+
+    <?php include dirname(__FILE__) . '/parts/header.php'; ?>
+
+    <main class="l-main <?php if (is_front_page()) echo 'l-main--front'; ?>" id="l-main">

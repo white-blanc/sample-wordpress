@@ -1,0 +1,301 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+@use "../../foundation/bp" as bp;
+
+// ファーストビュー
+.p-top-hero {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    height: 100vh;
+    z-index: 0;
+
+    &__img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+    }
+
+    &__inner {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 40%, c.$bg 60%);
+
+        @include bp.bp(tb) {
+            background: linear-gradient(to left, transparent 40%, c.$bg 60%);
+        }
+    }
+
+    &__catch {
+        display: flex;
+        width: 90%;
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50% 0 0;
+        align-items: center;
+        font-size: 2em;
+        font-family: f.$zen;
+
+        @include bp.bp(tb) {
+            padding: 100px 50% 0 0;
+        }
+
+        span {
+            color: c.$main;
+        }
+    }
+}
+
+.p-top-title {
+    font-family: f.$zen;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 3em;
+        border-top: 1px c.$main solid;
+        margin: 10px 0 0;
+    }
+
+    &__en {
+        display: block;
+        color: c.$main;
+        font-size: 12px;
+    }
+
+    &__jp {
+        display: block;
+        font-size: 1.5em;
+    }
+}
+
+.p-top-about {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include bp.bp(tb) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__img {
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        padding: 50px 20px;
+        width: 100%;
+
+        @include bp.bp(tb) {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+    }
+
+    &__text {
+        margin: 100px 0 0;
+
+        @include bp.bp(tb) {
+            margin: 150px 0 0;
+        }
+    }
+
+    &__link {
+        margin: 50px 0 0;
+    }
+}
+
+.p-top-service {
+    background-color: c.$black;
+    padding: 50px 0;
+    color: c.$white;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 50px auto 0;
+
+        @include bp.bp(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include bp.bp(tb) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &-item {
+        background-color: c.$bg;
+        padding: 40px 20px 20px;
+        color: c.$black;
+
+        @include bp.bp(xl) {
+            padding: 40px 40px 20px;
+        }
+
+        &__num {
+            color: c.$main;
+        }
+
+        &__title {
+            font-size: 1.2em;
+        }
+
+        &__content {
+            margin: 20px 0 0;
+        }
+
+        &__link {
+            margin: 50px 0 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.p-top-works {
+    padding: 50px 0;
+    background-color: c.$bg;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 50px 0 0;
+        gap: 20px;
+
+        @include bp.bp(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include bp.bp(tb) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &-item {
+        display: block;
+        aspect-ratio: 4 / 3;
+        text-decoration: none;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+
+        @include bp.bp(tb) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__content {
+            background-color: rgba(c.$black, 0.6);
+            color: c.$white;
+            width: 100%;
+            padding: 20px 10px 10px;
+
+            @include bp.bp(tb) {
+                padding: 20px 20px 10px;
+            }
+        }
+
+        &__cat {
+            color: c.$sub;
+        }
+
+        &__title {
+            font-size: 1.2em;
+        }
+    }
+
+    &__link {
+        margin: 40px 0 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.p-top-recruit {
+    display: grid;
+
+    @include bp.bp(tb) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__left {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: c.$main;
+        color: c.$white;
+        text-align: center;
+        font-family: f.$zen;
+        font-size: 2em;
+    }
+
+    &__right {
+        padding: 20px 0;
+
+        @include bp.bp(tb) {
+            padding: 60px 0;
+        }
+    }
+
+    &__main {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    &__content {
+        margin: 80px 0 0;
+    }
+
+    &__link {
+        margin: 40px 0 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
