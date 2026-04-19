@@ -1,0 +1,16 @@
+@use "../foundation/color" as c;
+@use "../foundation/fonts" as f;
+@use "../foundation/bp" as bp;
+
+.l-page-head {
+    padding: 90px 0 60px;
+    font-family: f.$zen;
+    font-size: 2em;
+    font-weight: 700;
+
+    &__inner {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

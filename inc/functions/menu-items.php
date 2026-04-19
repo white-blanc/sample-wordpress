@@ -25,6 +25,12 @@ function menu_items() {
     );
 
     $menu[] = array(
+        'name' => '採用情報',
+        'url' => home_url('/recruit/'),
+    );
+
+
+    $menu[] = array(
         'name' => 'お問い合わせ',
         'url' => home_url('/contact/'),
     );

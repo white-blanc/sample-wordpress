@@ -3,7 +3,7 @@
 if (! defined('ABSPATH')) exit;
 
 ?>
-<header class="l-header" id="header">
+<header class="l-header <?php if (is_front_page()) echo 'l-header--front'; ?>" id="header">
     <div class="l-header__inner">
         <?php
         $tag = 'div';

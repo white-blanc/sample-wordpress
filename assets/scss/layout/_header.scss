@@ -2,11 +2,15 @@
 @use "../foundation/bp" as bp;
 
 .l-header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 5000;
+
+    &--front {
+        position: fixed;
+    }
 
     &::before {
         content: "";
