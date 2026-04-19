@@ -258,9 +258,14 @@
 
 .p-top-recruit {
     display: grid;
+    grid-template-areas:
+        "ttl"
+        "catch"
+        "info";
 
     @include bp.bp(tb) {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: none;
     }
 
     &__left {
@@ -273,20 +278,54 @@
         text-align: center;
         font-family: f.$zen;
         font-size: 2em;
+        grid-area: catch;
+
+        @include bp.bp(tb) {
+            grid-area: auto;
+        }
     }
 
     &__right {
-        padding: 20px 0;
+        display: contents;
 
         @include bp.bp(tb) {
+            display: block;
             padding: 60px 0;
         }
     }
 
     &__main {
+        display: contents;
+
+        @include bp.bp(tb) {
+            display: block;
+        }
+    }
+
+    &__main-inner {
         width: 90%;
         margin: 0 auto;
         max-width: 600px;
+        grid-area: info;
+        padding: 20px 0;
+
+        @include bp.bp(tb) {
+            grid-area: auto;
+            padding: 0;
+        }
+    }
+
+    &__title {
+        grid-area: ttl;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px 0;
+
+        @include bp.bp(tb) {
+            grid-area: auto;
+            padding: 0;
+        }
     }
 
     &__content {

@@ -141,15 +141,17 @@ get_header();
     </div>
     <div class="p-top-recruit__right">
         <div class="p-top-recruit__main">
-            <h2 class="p-top-title">
+            <h2 class="p-top-title p-top-recruit__title">
                 <span class="p-top-title__en">RECRUIT</span>
                 <span class="p-top-title__jp">採用情報</span>
             </h2>
 
-            <div class="p-top-recruit__content">暁工務店では、共に家づくりを担う仲間を募集しています。技術を磨きたい方、地域に根ざした仕事がしたい方、ぜひご応募ください。</div>
+            <div class="p-top-recruit__main-inner">
+                <div class="p-top-recruit__content">暁工務店では、共に家づくりを担う仲間を募集しています。技術を磨きたい方、地域に根ざした仕事がしたい方、ぜひご応募ください。</div>
 
-            <div class="p-top-recruit__link">
-                <a class="c-link" href="<?php echo home_url('recruit'); ?>">採用情報を詳しく見る</a>
+                <div class="p-top-recruit__link">
+                    <a class="c-link" href="<?php echo home_url('recruit'); ?>">採用情報を詳しく見る</a>
+                </div>
             </div>
         </div>
     </div>

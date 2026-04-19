@@ -1,0 +1,110 @@
+@use "../foundation/color" as c;
+@use "../foundation/bp" as bp;
+
+.l-footer {
+    background-color: c.$black;
+    color: c.$white;
+    padding: 60px 0 90px;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+
+        @include bp.bp(tb) {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px 100px;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 100px;
+        aspect-ratio: 2 / 1;
+        display: block;
+        text-decoration: none;
+        background-color: c.$white;
+        mask-image: url("../img/common/logo-side.svg");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        margin: 0 0 50px;
+    }
+
+    &__info {
+    }
+
+    &__tel {
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 1em;
+            aspect-ratio: 1 / 1;
+            vertical-align: middle;
+            background-color: c.$white;
+            mask-image: url("../img/icon/icon-tel.svg");
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+            margin-right: 0.5em;
+        }
+    }
+
+    &__mail {
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 1em;
+            aspect-ratio: 1 / 1;
+            vertical-align: middle;
+            background-color: c.$white;
+            mask-image: url("../img/icon/icon-mail.svg");
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+            margin-right: 0.5em;
+        }
+    }
+
+    &__address {
+        margin: 20px 0 0;
+    }
+
+    &__nav {
+        padding: 40px 0 0;
+    }
+
+    &-menu {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em 40px;
+
+        &__item {
+        }
+
+        &__link {
+            text-decoration: none;
+        }
+    }
+
+    &__bottom {
+        width: 90%;
+        margin: 50px auto 0;
+        max-width: 1200px;
+    }
+
+    &__privacy {
+        display: block;
+        text-decoration: none;
+        width: fit-content;
+    }
+
+    &__copyright {
+        border-top: 1px c.$white solid;
+        margin: 50px auto 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
