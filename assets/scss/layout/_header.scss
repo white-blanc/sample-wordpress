@@ -21,13 +21,13 @@
         z-index: -1;
         top: 0;
         left: 0;
-        background: linear-gradient(to top, transparent, c.$white);
+        background: linear-gradient(to top, transparent, c.$bg);
         transition: 0.3s;
     }
 
     &.is-scrolled {
         &::before {
-            background: c.$white;
+            background: c.$bg;
             box-shadow: c.$black 0px 3px 6px;
         }
     }

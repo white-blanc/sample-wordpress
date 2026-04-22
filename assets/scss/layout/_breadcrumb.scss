@@ -1,0 +1,15 @@
+@use "../foundation/color" as c;
+
+.l-breadcrumb {
+    padding: 10px 0;
+    background-color: c.$white;
+    box-shadow: c.$gray 0 3px 6px;
+    position: relative;
+    z-index: 0;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+}

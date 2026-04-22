@@ -1,10 +1,11 @@
 <?php
 if (! defined('ABSPATH')) exit;
 get_header();
-include_once dirname(__FILE__) . '/parts/page-head.php';
-
-
-
-the_content();
-
+?>
+<div class="l-content">
+    <div class="l-content__inner">
+        <?php the_content(); ?>
+    </div>
+</div>
+<?php
 get_footer();

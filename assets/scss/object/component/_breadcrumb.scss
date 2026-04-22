@@ -1,0 +1,31 @@
+@use "../../foundation/color" as c;
+
+.c-breadcrumb {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
+        color: c.$gray;
+        font-size: 0.8em;
+        gap: 0.5em;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+
+        &:not(:first-child) {
+            &::before {
+                content: "";
+                display: block;
+                width: 0.5em;
+                aspect-ratio: 1 / 1;
+                border-top: 1px c.$gray solid;
+                border-right: 1px c.$gray solid;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

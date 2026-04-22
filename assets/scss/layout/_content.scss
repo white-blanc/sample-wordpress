@@ -1,0 +1,11 @@
+@use "../foundation/color" as c;
+
+.l-content {
+    padding: 100px 0 0;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+}

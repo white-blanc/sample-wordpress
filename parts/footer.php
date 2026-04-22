@@ -1,3 +1,7 @@
+<?php
+if (! defined('ABSPATH')) exit;
+
+?>
 <footer class="l-footer" id="footer">
     <div class="l-footer__inner">
         <div class="l-footer__info">

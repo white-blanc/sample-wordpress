@@ -2,8 +2,11 @@
 
 @forward "./common";
 
+@forward "./object/component/breadcrumb";
 @forward "./object/component/link";
 
+@forward "./layout/breadcrumb";
+@forward "./layout/content";
 @forward "./layout/footer";
 @forward "./layout/header";
 @forward "./layout/main";
