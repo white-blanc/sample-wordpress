@@ -19,13 +19,13 @@ get_header();
         <img src="<?php echo get_template_directory_uri() . '/assets/img/top/top-about.jpg'; ?>" alt="ABOUT背景" loading="lazy">
     </div>
     <div class="p-top-about__content">
-        <h2 class="p-top-title">
-            <span class="p-top-title__en">ABOUT</span>
-            <span class="p-top-title__jp">私たちについて</span>
+        <h2 class="l-title">
+            <span class="l-title__en">ABOUT</span>
+            <span class="l-title__jp">私たちについて</span>
         </h2>
 
         <div class="p-top-about__text">
-            昭和27年の創業以来、福岡の地で家づくりに向き合ってきました。素材を選び、職人が手を動かし、お客様と共に理想の住まいを形にする。それが暁工務店の仕事です。
+            昭和27年の創業以来、〇〇の地で家づくりに向き合ってきました。素材を選び、職人が手を動かし、お客様と共に理想の住まいを形にする。それが暁工務店の仕事です。
         </div>
 
         <div class="p-top-about__link">
@@ -36,9 +36,9 @@ get_header();
 
 <section class="p-top-service">
     <div class="p-top-service__inner">
-        <h2 class="p-top-title">
-            <span class="p-top-title__en">SERVICE</span>
-            <span class="p-top-title__jp">サービス</span>
+        <h2 class="l-title">
+            <span class="l-title__en">SERVICE</span>
+            <span class="l-title__jp">サービス</span>
         </h2>
 
         <div class="p-top-service__wrap">
@@ -79,9 +79,9 @@ get_header();
 
 <section class="p-top-works">
     <div class="p-top-works__inner">
-        <h2 class="p-top-title">
-            <span class="p-top-title__en">WORKS</span>
-            <span class="p-top-title__jp">施工実績</span>
+        <h2 class="l-title">
+            <span class="l-title__en">WORKS</span>
+            <span class="l-title__jp">施工実績</span>
         </h2>
         <div class="p-top-works__wrap">
             <?php
@@ -141,9 +141,9 @@ get_header();
     </div>
     <div class="p-top-recruit__right">
         <div class="p-top-recruit__main">
-            <h2 class="p-top-title p-top-recruit__title">
-                <span class="p-top-title__en">RECRUIT</span>
-                <span class="p-top-title__jp">採用情報</span>
+            <h2 class="l-title p-top-recruit__title">
+                <span class="l-title__en">RECRUIT</span>
+                <span class="l-title__jp">採用情報</span>
             </h2>
 
             <div class="p-top-recruit__main-inner">

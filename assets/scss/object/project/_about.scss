@@ -1,0 +1,167 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+@use "../../foundation/bp" as bp;
+
+.p-about-concept {
+    padding: 120px 0;
+    background-image: url("../img/top/top-about.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+        background-color: c.$white;
+        padding: 40px 20px 20px;
+
+        @include bp.bp(tb) {
+            padding: 120px 60px 60px;
+        }
+    }
+
+    &__catch {
+        font-size: 2em;
+        font-weight: 700;
+        font-family: f.$zen;
+        margin: 90px 0 30px;
+    }
+
+    &__content {
+        // margin: 90px 0 0;
+    }
+}
+
+.p-about-message {
+    background-color: c.$black;
+    color: c.$white;
+    padding: 120px 0;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        gap: 40px 80px;
+        max-width: 1200px;
+
+        @include bp.bp(tb) {
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas:
+                "img ttl"
+                "img msg";
+        }
+    }
+
+    &__title {
+        grid-area: ttl;
+    }
+
+    &__img {
+        grid-area: img;
+    }
+
+    &__content {
+        grid-area: msg;
+    }
+
+    &__info {
+        margin: 40px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em 1em;
+        justify-content: flex-end;
+    }
+}
+
+.p-about-company {
+    padding: 120px 0;
+    background-color: c.$bg;
+
+    &__inner {
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 90%;
+    }
+
+    &-table {
+        margin: 90px auto 0;
+        max-width: 800px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        border-top: 1px c.$gray solid;
+
+        &__row {
+            display: grid;
+            grid-column: span 2;
+            grid-template-columns: subgrid;
+            border-bottom: 1px c.$gray solid;
+            padding: 20px 0;
+        }
+
+        &__content {
+            padding-left: 20px;
+        }
+    }
+}
+
+.p-about-history {
+    padding: 120px 0;
+
+    &__inner {
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 90%;
+    }
+
+    &-table {
+        $this: &;
+
+        display: grid;
+        grid-template-columns: max-content 40px 1fr;
+        margin: 90px auto 0;
+        max-width: 800px;
+        list-style: none;
+
+        &__item {
+            display: grid;
+            grid-column: span 3;
+            grid-template-columns: subgrid;
+        }
+
+        &__year {
+            padding: 0 0 20px;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                aspect-ratio: 1 / 1;
+                position: absolute;
+                top: 0.5em;
+                right: -20px;
+                transform: translate(50%, 0%);
+                width: 10px;
+                border-radius: 50%;
+                background-color: c.$main;
+            }
+
+            #{$this}__item:not(:last-child) &::after {
+                content: "";
+                display: block;
+                height: 100%;
+                position: absolute;
+                top: 0.5em;
+                right: -20px;
+                transform: translate(50%, 0);
+                border-left: 1px c.$main solid;
+            }
+        }
+
+        &__content {
+            grid-column-start: 3;
+        }
+    }
+}

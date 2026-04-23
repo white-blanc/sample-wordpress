@@ -1,0 +1,25 @@
+@use "../foundation/color" as c;
+@use "../foundation/fonts" as f;
+
+.l-title {
+    font-family: f.$zen;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 3em;
+        border-top: 1px c.$main solid;
+        margin: 10px 0 0;
+    }
+
+    &__en {
+        display: block;
+        color: c.$main;
+        font-size: 12px;
+    }
+
+    &__jp {
+        display: block;
+        font-size: 1.5em;
+    }
+}
