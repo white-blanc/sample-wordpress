@@ -29,6 +29,10 @@ function menu_items() {
         'url' => home_url('/recruit/'),
     );
 
+    $menu[] = array(
+        'name' => 'お知らせ',
+        'url' => home_url('/news/'),
+    );
 
     $menu[] = array(
         'name' => 'お問い合わせ',
