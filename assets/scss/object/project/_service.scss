@@ -1,0 +1,220 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+@use "../../foundation/bp" as bp;
+
+.p-service {
+    padding: 120px 0;
+
+    &__inner {
+    }
+
+    &__sec {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &-nav {
+        width: 90%;
+        margin: 120px auto 0;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        list-style: none;
+        justify-content: center;
+        padding: 0 0 90px;
+
+        &__item {
+            width: 100%;
+
+            @include bp.bp(sm) {
+                max-width: 250px;
+            }
+        }
+
+        &__link {
+            display: grid;
+            gap: 10px;
+            text-decoration: none;
+            padding: 20px;
+            box-shadow: c.$gray 0 3px 6px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 1em;
+                aspect-ratio: 1 / 1;
+                background-color: c.$main;
+                mask-image: url("../img/icon/icon-arrow.svg");
+                mask-repeat: no-repeat;
+                mask-position: center;
+                mask-size: contain;
+                margin: 0 0 0 auto;
+            }
+        }
+
+        &__title {
+            font-size: 1.1em;
+            font-family: f.$zen;
+            font-weight: 700;
+        }
+
+        &__text {
+        }
+    }
+
+    &-main {
+        margin: 0 0 120px;
+
+        &__item {
+            &:nth-child(2n + 1) {
+                background-color: c.$bg;
+            }
+        }
+
+        &__inner {
+            display: grid;
+            gap: 10px 80px;
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 0;
+            // align-items: center;
+            grid-template-areas:
+                "ttl"
+                "img"
+                "text"
+                "other";
+
+            @include bp.bp(tb) {
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: max-content 1fr max-content;
+                grid-template-areas:
+                    "img ttl"
+                    "img text"
+                    "other other";
+            }
+        }
+
+        &__head {
+            grid-area: ttl;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        &__num {
+            color: c.$main;
+        }
+
+        &__title {
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        &__thumb {
+            grid-area: img;
+            aspect-ratio: 4 / 3;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__content {
+            grid-area: text;
+        }
+
+        &__other {
+            grid-area: other;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: c.$sub;
+            color: c.$white;
+        }
+
+        &__step {
+            width: 50%;
+            padding: 10px 30px 10px 10px;
+            position: relative;
+
+            @include bp.bp(tb) {
+                width: 33%;
+            }
+
+            @include bp.bp(pc) {
+                width: 20%;
+            }
+
+            &:not(:last-child) {
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 15px;
+                    aspect-ratio: 1 / 1;
+                    background-color: c.$white;
+                    mask-image: url("../img/icon/icon-arrow.svg");
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                    mask-size: contain;
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translate(50%, -50%);
+                }
+            }
+        }
+
+        &__step-num {
+            font-size: 0.9em;
+            display: block;
+            color: c.$main;
+        }
+
+        &__step-text {
+            margin: 10px 0 0;
+        }
+    }
+
+    &-why {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-start;
+        margin: 50px auto 0;
+        gap: 10px 20px;
+
+        @include bp.bp(sm) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include bp.bp(pc) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        &__item {
+            display: grid;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        &__icon {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: c.$main;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+            max-width: 100px;
+            margin: 0 auto;
+        }
+
+        &__text {
+            text-align: center;
+        }
+    }
+}

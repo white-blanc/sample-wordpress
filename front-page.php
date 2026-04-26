@@ -63,7 +63,7 @@ get_header();
                         <h3 class="p-top-service-item__title"><?php the_title(); ?></h3>
                         <div class="p-top-service-item__content"><?php echo get_field('comment'); ?></div>
                         <div class="p-top-service-item__link">
-                            <a href="<?php echo get_permalink(); ?>" class="c-link">詳しく見る</a>
+                            <a href="<?php echo home_url('service') . '#' . get_the_ID(); ?>" class="c-link">詳しく見る</a>
                         </div>
                     </div>
             <?php
