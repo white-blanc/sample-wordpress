@@ -1,0 +1,97 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/bp" as bp;
+
+.p-works {
+    padding: 120px 0;
+    background-color: c.$bg;
+
+    &__inner {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    &-sort {
+        display: grid;
+        gap: 30px;
+        box-shadow: c.$gray 0 3px 6px;
+        padding: 20px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+        background-color: c.$white;
+
+        @include bp.bp(tb) {
+            padding: 60px;
+        }
+
+        &__row {
+            display: grid;
+            gap: 10px;
+        }
+
+        &__title {
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        &__labels {
+            display: flex;
+            gap: 0.5em 1em;
+            flex-wrap: wrap;
+        }
+
+        &__label {
+            cursor: pointer;
+            padding: 0.2em 0.8em;
+            border-radius: 100vh;
+            border: 1px c.$main solid;
+
+            &:has(input:checked) {
+                background-color: c.$main;
+                color: c.$white;
+            }
+        }
+
+        &__input {
+            display: none;
+        }
+
+        &__submit {
+            -webkit-appearance: none;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            border-radius: 0;
+            background-color: c.$main;
+            outline: none;
+            box-shadow: none;
+            border: 1px c.$main solid;
+            padding: 0.5em 1em;
+            color: c.$white;
+            cursor: pointer;
+            transition: 0.5s;
+
+            @include bp.bp(tb) {
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin: 50px 0 0;
+
+        @include bp.bp(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include bp.bp(tb) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

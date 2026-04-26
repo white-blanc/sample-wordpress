@@ -97,29 +97,31 @@ get_header();
                 while ($wp_query->have_posts()) {
                     $wp_query->the_post();
             ?>
-                    <a class="p-top-works-item" href="<?php echo get_permalink(); ?>">
-                        <div class="p-top-works-item__img">
-                            <?php if (get_the_post_thumbnail_url()): ?>
-                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
-                            <?php else: ?>
-                                <img src="<?php echo get_template_directory_uri() . '/assets/img/common/thumb-default.png'; ?>" alt="<?php echo get_the_title(); ?>">
-                            <?php endif; ?>
-                        </div>
-                        <div class="p-top-works-item__content">
-                            <div class="p-top-works-item__cat">
-                                <?php
-                                $cats = array(
-                                    1 => '注文住宅',
-                                    2 => 'リフォーム',
-                                    3 => 'アフターサポート',
-                                );
-
-                                if (!empty($cats[get_field('type')])) echo $cats[get_field('type')];
-                                ?>
+                    <div class="p-wop-works__item">
+                        <a class="c-work" href="<?php echo get_permalink(); ?>">
+                            <div class="c-work__img">
+                                <?php if (get_the_post_thumbnail_url()): ?>
+                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
+                                <?php else: ?>
+                                    <img src="<?php echo get_template_directory_uri() . '/assets/img/common/thumb-default.png'; ?>" alt="<?php echo get_the_title(); ?>">
+                                <?php endif; ?>
                             </div>
-                            <h3 class="p-top-works-item__title"><?php echo get_the_title(); ?></h3>
-                        </div>
-                    </a>
+                            <div class="c-work__content">
+                                <div class="c-work__cat">
+                                    <?php
+                                    $cats = array(
+                                        1 => '注文住宅',
+                                        2 => 'リフォーム',
+                                        3 => 'アフターサポート',
+                                    );
+
+                                    if (!empty($cats[get_field('type')])) echo $cats[get_field('type')];
+                                    ?>
+                                </div>
+                                <h3 class="c-work__title"><?php echo get_the_title(); ?></h3>
+                            </div>
+                        </a>
+                    </div>
             <?php
 
                 }
