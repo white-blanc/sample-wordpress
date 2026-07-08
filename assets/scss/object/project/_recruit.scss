@@ -1,0 +1,182 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+@use "../../foundation/bp" as bp;
+
+.p-recruit-catch {
+    padding: 120px 0;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+        display: grid;
+        gap: 1em 2em;
+
+        @include bp.bp(tb) {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: flex-start;
+        }
+    }
+
+    &__catch {
+        font-size: 1.5em;
+        font-family: f.$zen;
+        color: c.$main;
+    }
+
+    &__text {
+        margin: 1em 0 0;
+    }
+}
+
+.p-recruit-environment {
+    padding: 120px 0;
+    background-color: c.$black;
+    color: c.$white;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    &__wrap {
+        display: grid;
+        margin: 50px 0 0;
+        background-color: c.$main;
+        gap: 1px;
+
+        @include bp.bp(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include bp.bp(tb) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &-item {
+        padding: 20px;
+        background-color: c.$black;
+
+        @include bp.bp(tb) {
+            padding: 40px;
+        }
+
+        &__icon {
+            aspect-ratio: 1 / 1;
+            display: block;
+            width: 100%;
+            max-width: 50px;
+            background-color: c.$white;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+            margin: 0 auto;
+        }
+
+        &__title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin: 1em 0 0.5em;
+            text-align: center;
+        }
+    }
+}
+
+.p-recruit-jobs {
+    padding: 120px 0;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+        gap: 1em 2em;
+    }
+
+    &__wrap {
+        display: grid;
+        gap: 100px;
+        margin: 50px 0 0;
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px 0;
+
+        &__title {
+            font-weight: 500;
+            color: c.$main;
+            font-size: 1.1em;
+            grid-column: span 2;
+        }
+
+        &__name {
+            border-bottom: 1px c.$main solid;
+            padding: 0.5em 0;
+        }
+
+        &__label {
+            border-bottom: 1px c.$main solid;
+            padding: 0.5em 0 0.5em 1em;
+        }
+    }
+}
+
+.p-recruit-flow {
+    padding: 120px 0;
+    background-color: c.$bg;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+        gap: 1em 2em;
+    }
+
+    &__wrap {
+        margin: 100px auto 0;
+        max-width: 600px;
+        display: grid;
+        gap: 30px;
+    }
+
+    &-item {
+        display: grid;
+        gap: 10px;
+
+        &__name {
+            background-color: c.$sub;
+            text-align: center;
+            padding: 0.2em;
+        }
+
+        &__comment {
+            text-align: center;
+        }
+
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+                border-top: 10px c.$main solid;
+                border-left: 10px transparent solid;
+                border-right: 10px transparent solid;
+            }
+        }
+    }
+
+    &__btn {
+        display: block;
+        text-decoration: none;
+        background-color: c.$main;
+        color: c.$white;
+        margin: 100px auto 0;
+        max-width: 500px;
+        padding: 1em;
+        text-align: center;
+    }
+}
