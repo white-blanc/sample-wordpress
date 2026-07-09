@@ -4,6 +4,8 @@
 
 @forward "./object/component/breadcrumb";
 @forward "./object/component/link";
+@forward "./object/component/news";
+@forward "./object/component/pagination";
 @forward "./object/component/work";
 
 @forward "./layout/breadcrumb";
@@ -16,6 +18,7 @@
 @forward "./layout/works";
 
 @forward "./object/project/about";
+@forward "./object/project/archive";
 @forward "./object/project/recruit";
 @forward "./object/project/service";
 @forward "./object/project/top";

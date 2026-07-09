@@ -1,0 +1,78 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/bp" as bp;
+
+.c-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+    width: fit-content;
+    font-size: 0.8em;
+
+    @include bp.bp(tb) {
+        gap: 0.5em;
+        font-size: 1em;
+    }
+
+    &__page {
+        width: 2em;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border: 1px c.$main solid;
+        background-color: c.$white;
+        color: c.$main;
+        text-decoration: none;
+
+        @include bp.bp(tb) {
+            width: 2.5em;
+        }
+
+        &--now {
+            background-color: c.$main;
+            color: c.$white;
+        }
+
+        &--dot {
+            border: none;
+        }
+
+        &--prev,
+        &--next,
+        &--first,
+        &--last {
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                width: 0.45em;
+                aspect-ratio: 1 / 1;
+                border-top: 2px currentColor solid;
+                border-right: 2px currentColor solid;
+            }
+        }
+
+        &--first,
+        &--prev {
+            &::before,
+            &::after {
+                transform: rotate(-135deg);
+            }
+        }
+
+        &--last,
+        &--next {
+            &::before,
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+
+        &--prev::after,
+        &--next::after {
+            display: none;
+        }
+    }
+}

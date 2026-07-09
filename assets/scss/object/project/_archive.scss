@@ -1,0 +1,24 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+@use "../../foundation/bp" as bp;
+
+.p-archive {
+    padding: 120px 0;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    &__wrap {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin: 50px auto 0;
+    }
+}
