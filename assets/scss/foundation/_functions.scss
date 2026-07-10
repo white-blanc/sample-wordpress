@@ -1,0 +1,119 @@
+@mixin wp-content() {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.75em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    h4 {
+        font-size: 1.25em;
+    }
+    h5 {
+        font-size: 1.1em;
+    }
+    h6 {
+        font-size: 1em;
+    }
+
+    p {
+        margin-bottom: 1em;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+    em {
+        font-style: italic;
+    }
+
+    sub {
+        vertical-align: sub;
+    }
+
+    sup {
+        vertical-align: super;
+    }
+
+    ul,
+    ol {
+        padding-left: 2em;
+        margin-bottom: 1em;
+    }
+
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: decimal;
+    }
+
+    li {
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    figure {
+        margin-bottom: 1em;
+    }
+
+    figcaption {
+        font-size: 0.8em;
+        margin-top: 0.5em;
+    }
+
+    blockquote {
+        padding-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1em;
+    }
+
+    th,
+    td {
+        padding: 0.75em;
+        text-align: left;
+    }
+
+    hr {
+        margin: 2em 0;
+    }
+
+    pre {
+        padding: 1em;
+        overflow-x: auto;
+        margin-bottom: 1em;
+    }
+
+    code {
+        font-family: monospace;
+    }
+
+    pre code {
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,49 @@
+@use "../foundation/color" as c;
+@use "../foundation/fonts" as f;
+@use "../foundation/bp" as bp;
+@use "../foundation/functions" as func;
+
+.l-single {
+    padding: 120px 0;
+
+    &__inner {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 800px;
+    }
+
+    &__title {
+        font-size: 2em;
+        padding: 0.25em 0;
+        border-bottom: 1px c.$black solid;
+        margin: 0 0 1em;
+        font-weight: 700;
+    }
+
+    &__date {
+        color: c.$gray;
+        margin: 1em 0;
+    }
+
+    &__content {
+        @include func.wp-content();
+    }
+
+    &__return {
+        display: block;
+        width: 100%;
+        margin: 100px auto 0;
+        background-color: c.$main;
+        color: c.$white;
+        text-align: center;
+        max-width: 300px;
+        text-decoration: none;
+        padding: 0.5em;
+
+        @include bp.bp(tb) {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

@@ -25,8 +25,8 @@ function breadcrumb() {
 
         case is_single():
         case is_singular():
-            $post_type    = get_post_type();
-            $archive_link = get_post_type_archive_link($post_type);
+            $post_type = get_post_type();
+            $archive_link = ($post_type === 'post') ? home_url('/news/') : get_post_type_archive_link($post_type);
             if ($archive_link) {
                 $post_type_obj = get_post_type_object($post_type);
                 $crumbs[] = [

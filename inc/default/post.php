@@ -16,7 +16,9 @@ add_filter(
     'register_post_type_args',
     function ($args, $post_type) use ($post_label, $post_slug) {
         if ('post' == $post_type) {
-            $args['rewrite'] = true;
+            $args['rewrite'] = [
+                'slug' => $post_slug,
+            ];
             $args['has_archive'] = $post_slug;
             $args['label'] = $post_label;
         }
