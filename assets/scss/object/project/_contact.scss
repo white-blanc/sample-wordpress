@@ -1,0 +1,64 @@
+@use "../../foundation/color" as c;
+@use "../../foundation/fonts" as f;
+@use "../../foundation/bp" as bp;
+
+.p-contact {
+    padding: 120px 0;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    &__form {
+        display: grid;
+        max-width: 800px;
+        margin: o auto;
+    }
+
+    &__label {
+        display: block;
+        font-weight: 500;
+        margin: 2em 0 0.5em;
+        color: c.$black;
+    }
+
+    &__content {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            background: c.$white;
+            color: c.$black;
+            border: 1px c.$sub solid;
+            padding: 0.75em 1em;
+            outline: none;
+            transition: border-color 0.2s;
+
+            &:focus {
+                border-color: c.$main;
+            }
+        }
+
+        textarea {
+            height: 200px;
+            resize: vertical;
+        }
+    }
+
+    &__submit {
+        width: fit-content;
+        margin: 3em auto 0;
+        background: c.$main;
+        color: c.$white;
+        border: none;
+        padding: 1em 3em;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
