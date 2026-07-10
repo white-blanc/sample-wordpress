@@ -2,7 +2,7 @@
 if (! defined('ABSPATH')) exit;
 
 $perpage = 10;
-$page_num = empty($_GET['page-num']) ? 1 : $_GET['page-num'];
+$page_num = empty($_GET['page-num']) ? 1 : max(1, intval($_GET['page-num']));
 $args = array(
     'post_type' => 'post',
     'post_status' => 'publish',
