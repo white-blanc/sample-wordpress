@@ -47,6 +47,10 @@
             padding: 100px 50% 0 0;
         }
 
+        @include bp.bp(pc) {
+            padding: 100px 0 0 0;
+        }
+
         span {
             color: c.$main;
         }
